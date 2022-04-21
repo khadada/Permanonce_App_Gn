@@ -62,7 +62,11 @@ class PermanonceApp(QMainWindow):
         #...................... 
         #......................
         #----------------------------------------------------------
-        
+        # Create the container that hold widgets and set its layout a
+        container = QWidget()
+        container.setLayout(main_layout)
+        # Set the container as the central widget of the main window
+        self.setCentralWidget(container)
  # Run the program:
 if __name__ == "__main__":
     app = QApplication(sys.argv)
