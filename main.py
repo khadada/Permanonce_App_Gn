@@ -16,7 +16,7 @@ class PermanonceApp(QMainWindow):
         """
         Initialize the main window and display its content
         """
-        self.setGeometry(10, 10, 800, 600)
+        self.setGeometry(50, 50, 800, 600)
         self.setWindowTitle("برنامج الخفير فرقة تماسين")
         self.setWindowIcon(QIcon("icons/policeman.png"))
         self.display_content()
