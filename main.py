@@ -35,6 +35,7 @@ class PermanonceApp(QMainWindow):
                                          "border:2px solid #0078d7;"
                                          "background-color: rgb(255, 255, 255);"
                                          "color: #0078d7;"
+                                         "padding: 15px;"
                                          "border-radius: 8px"
                                          "}"
                                          "QPushButton::hover"
@@ -43,7 +44,6 @@ class PermanonceApp(QMainWindow):
                                          "color: #fff;"
                                          "}"
                                          )
-         
         #......................
         #----------------------------------------------------------
         self.call_log_btn = QPushButton(" المكالمات الهاتفية")
