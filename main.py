@@ -6,6 +6,10 @@ from PyQt5.QtGui import (QPalette,QColor,QFont,QIcon)
 
 # MainWindowApp class
 class PermanonceApp(QMainWindow):
+    PRIMARY_COLOR = "#10893e"
+    INITIAL_COLOR = "#fff"
+    RADIUS_BTNS = "8px"
+    PADDING_BTN = "15px"
     def __init__(self):
         super().__init__()
         self.workspace = None
@@ -32,18 +36,20 @@ class PermanonceApp(QMainWindow):
         self.day_event_btn.setStyleSheet("QPushButton"
                                          "{"
                                          "font: 75 12pt Calibri;"
-                                         "border:2px solid #0078d7;"
-                                         "background-color: rgb(255, 255, 255);"
-                                         "color: #0078d7;"
-                                         "padding: 15px;"
-                                         "border-radius: 8px"
+                                         f"border:2px solid {PermanonceApp.PRIMARY_COLOR};"
+                                         f"background-color: {PermanonceApp.INITIAL_COLOR};"
+                                         f"color: {PermanonceApp.PRIMARY_COLOR};"
+                                         f"padding: {PermanonceApp.PADDING_BTN};"
+                                         f"border-radius: {PermanonceApp.RADIUS_BTNS};"
                                          "}"
                                          "QPushButton::hover"
                                          "{"
-                                         "background-color: #0078d7;"
-                                         "color: #fff;"
+                                         f"background-color: {PermanonceApp.PRIMARY_COLOR};"
+                                         f"color: {PermanonceApp.INITIAL_COLOR};"
                                          "}"
                                          )
+        main_layout.addWidget(self.day_event_btn,0,0,1,1)
+
         #......................
         #----------------------------------------------------------
         self.call_log_btn = QPushButton(" المكالمات الهاتفية")
