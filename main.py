@@ -1,5 +1,6 @@
 # Importinng necessary modules and classes:
 import sys
+from turtle import color
 from PyQt5.QtWidgets import (QMainWindow,QApplication,QLabel,QComboBox,QLineEdit,QTextEdit,QWidget,QToolBar,QStatusBar,QGridLayout,QPushButton)
 from PyQt5.QtGui import (QPalette,QColor,QFont,QIcon)
 
@@ -28,7 +29,21 @@ class PermanonceApp(QMainWindow):
         main_layout = QGridLayout()
         #----------------------------------------------------------
         self.day_event_btn = QPushButton("الأحداث اليومية")
-        #...................... 
+        self.day_event_btn.setStyleSheet("QPushButton"
+                                         "{"
+                                         "font: 75 12pt Calibri;"
+                                         "border:2px solid #0078d7;"
+                                         "background-color: rgb(255, 255, 255);"
+                                         "color: #0078d7;"
+                                         "border-radius: 8px"
+                                         "}"
+                                         "QPushButton::hover"
+                                         "{"
+                                         "background-color: #0078d7;"
+                                         "color: #fff;"
+                                         "}"
+                                         )
+         
         #......................
         #----------------------------------------------------------
         self.call_log_btn = QPushButton(" المكالمات الهاتفية")
@@ -48,7 +63,11 @@ class PermanonceApp(QMainWindow):
         #......................
         #----------------------------------------------------------
         
-        
+ # Run the program:
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    gn_apps =  PermanonceApp()   
+    sys.exit(app.exec_())   
         
         
         
